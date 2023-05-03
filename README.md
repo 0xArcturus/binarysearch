@@ -3,7 +3,7 @@ This project proves that ordering functions by use and then setting their method
 In this [compiler code](https://github.com/ethereum/solidity/blob/0cb279494a9af0938dfbf2ca5d0b21115198e8bb/libsolidity/codegen/ContractCompiler.cpp#LL326C1-L388C2) we can see that in the function `appendInternalSelector()`the compiler checks if the number of methods is over 4. If there are more than 4 it selects the method id in the middle of the remaining methods as a **pivot**, sets a `GT` comparison with the _pivot_ and calls itself recursively with the parameters for the new separated blocks of method ids, one block being higher method ids than the _pivot_ and the other lower, therefore creating a binary search.
 
 If the remaining method ids are `<= 4`, it just sets up a succession of `EQ` comparisons with the selectors in ascending order:
-![Block with under <=4 method ids](blockUnder5.jpg)
+![Block with under <=4 method ids](blockUnder5.png)
 
 On the vault contract these are the method ids in ascending order:
 
