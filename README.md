@@ -19,9 +19,11 @@ On the vault contract these are the method ids in ascending order:
 "controller()": "f77c4791",
 ```
 
-When compiling the Vault contract with 100_000 optimizer runs I got the the Vault.asm file in this repo, where you can see [the binary search algorithm in assembly.](https://github.com/0xArcturus/binarysearch/blob/40b4e8983d12b286fc56d7d484dc3ae8d1332943/Vault.asm#LL274C1-L344C13)
+When compiling the Vault contract with 200 optimizer and 100_000 optimizer runs I got the the Vault200Runs.asm and the Vault100_000Runs.asm files in this repo, where you can see [the binary search algorithm in assembly.](https://github.com/0xArcturus/binarysearch/blob/40b4e8983d12b286fc56d7d484dc3ae8d1332943/Vault.asm#LL274C1-L344C13).
 
-The following flowchart describes the assembly code:
+In both of them you can see that the contract implements a binary search, where the 100_000 runs file has two pivots and is more optimized than the 200 runs file, that implements one pivot.
+
+The following flowchart describes the assembly code of the most optimized:
 ![flowchart](flowchart.jpg)
 All in all, as far as [Markus](https://github.com/MarkuSchick) and I have understood, arriving to execution for method Id 0xa92c4707 consumes less gas than arriving to execution for method Id 0x5b1164de.
 
