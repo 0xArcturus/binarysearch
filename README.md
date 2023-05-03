@@ -24,7 +24,7 @@ When compiling the Vault contract with 200 optimizer runs and 100_000 optimizer 
 
 In both of them you can see that the contract implements a binary search, where the **100_000 runs** file has two pivots and is more optimized than the **200 runs** file, that implements only one pivot.
 
-The following flowchart describes the assembly code of the most optimized assembly code:
+The following flowchart describes the execution of the most optimized assembly code:
 
 ![flowchart](flowchart.jpg)
 All in all, as far as [Markus](https://github.com/MarkuSchick) and I have understood, arriving to execution for method Id 0xa92c4707 consumes less gas than arriving to execution for method Id 0x5b1164de.
